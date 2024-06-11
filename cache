@@ -1,6 +1,7 @@
 #!/bin/sh
 # save as e.g. $HOME/.local/bin/cacheme
 # and then chmod u+x $HOME/.local/bin/cacheme
+# https://stackoverflow.com/questions/11900239/can-i-cache-the-output-of-a-command-on-linux-from-cli/50257871#50257871
 VERBOSE=false
 PROG="$(basename $0)"
 DIR="${HOME}/.cache/${PROG}"
