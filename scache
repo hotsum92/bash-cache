@@ -1,0 +1,8 @@
+#!/bin/sh
+
+PROG="cache"
+DIR="${HOME}/.cache/${PROG}"
+CMD="$@"
+HASH=$(echo "$CMD" | md5sum | awk '{print $1}')
+CACHE="$DIR/$HASH"
+echo "$CACHE"
