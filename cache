@@ -9,5 +9,5 @@ mkdir -p "${DIR}"
 CMD="$@"
 HASH=$(echo "$CMD" | md5sum | awk '{print $1}')
 CACHE="$DIR/$HASH"
-test -f "${CACHE}" || eval "$CMD" > "${CACHE}"
+test -f "${CACHE}" || eval "$CMD" | cat > "${CACHE}"
 cat "${CACHE}"
